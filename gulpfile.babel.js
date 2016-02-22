@@ -25,12 +25,33 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
+  .pipe($.plumber())
+  .pipe($.sourcemaps.init())
+  .pipe($.babel())
+  .pipe($.sourcemaps.write('.'))
+  .pipe(gulp.dest('.tmp/scripts'))
+  .pipe(reload({stream: true}));
+});
+
+// deploy to AWS
+gulp.task('deploy', ['build'], () => {
+  // create a new publisher
+  const publisher = $.awspublish.create({
+    key: 'AKIAJ2FPNURRNA4AWSFQ',
+    secret: '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',
+    bucket: 'service-dev'
+  });
+
+  // define custom headers
+  const headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+  };
+
+  return gulp.src('dist/**/*.*')
+    .pipe(publisher.publish(headers))
+    .pipe(publisher.sync())
+    .pipe(publisher.cache())
+    .pipe($.awspublish.reporter());
 });
 
 function lint(files, options) {
@@ -56,6 +77,11 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
+    // rev js and css files in the stream
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
+    // update all references to rev files
+    .pipe($.revReplace())
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
