@@ -9,5 +9,28 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
-  }
+  },
+  "homepage": "https://github.com/jbwashington/servicedev2",
+  "authors": [
+    "James Washington <jbwashington@gmail.com>"
+  ],
+  "description": "dev environment for CCE",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "bootstrap",
+    "gulp",
+    "fontawesome",
+    "bower"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
