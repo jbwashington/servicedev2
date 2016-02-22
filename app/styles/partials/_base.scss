@@ -1,0 +1,115 @@
+// ..........................................
+// IMPORT FOR ALL MIXINS AND GLOBAL VARIABLES
+// ..........................................
+@import "modules/all";
+
+// ............
+// GOOGLE FONTS
+// ............
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700|Abril+Fatface);
+
+// ...............
+// COLOR VARIABLES
+// ...............
+$razorback  : #9D2235; // razorback red
+$dreambig   : #FF5859; // dream big
+$vac        : #842FA7; // VAC
+$engagement : #1FCFCB; // student engagement
+$recovery   : #F5BA0A; // RFR
+$pantry     : #00B44E; // pantry
+$literacy   : #2A7DE2; // literacy
+$white      : #FFF;    // white
+$black      : #000;    // black
+
+// COLOR PALETTE
+// .............
+$default-color       : $razorback;
+$alt-color           : darkgray;
+$light-bg-font-color : #000;
+$dark-bg-font-color  : #FFF;
+
+// FONTS
+// .....
+$lato                    : 'Lato', Helvetica, Arial, sans-serif;
+$fatface                 : 'Abril Fatface', cursive;
+
+// GLOBAL VARIABLES
+// ................
+$base-font   : $lato;
+$header-font : $lato;
+$alt-font    : $fatface;
+
+$h1-font-size   : 2.8rem;
+$h2-font-size   : 2.5rem;
+$h3-font-size   : 2.1rem;
+$h4-font-size   : 1.5rem;
+$h5-font-size   : 1.3rem;
+$h6-font-size   : 1.1rem;
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: $lato;
+$base-font-weight: $regular;
+$base-font-size: 1rem;
+$base-line-height: .1rem;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+// SCREEN BREAKPOINTS
+// ..................
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .container {
+    width: 1570px;
+  }
+}
+@media only screen and (max-width : 1199px) {}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) { /*Should be 1200px*/
+  .container {
+    width: 1170px;
+  }
+}
+@media only screen and (max-width : 991px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) { /*Should be 992px*/
+  .container {
+    width: 970px;
+  }
+}
+
+@media only screen and (max-width : 767px) {}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {}
+@media only screen and (max-width : 479px) {}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {}
+
+html {
+  font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+body {
+  font-family : $base-font;
+  font-size   : $base-font-size;
+}
+
+hr {
+  padding: 1em 0 1em 0;
+}
+

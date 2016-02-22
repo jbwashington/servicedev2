@@ -1,0 +1,49 @@
+// tweaks to make the uark header and footer styles play nice
+// ..........................................................
+h1.uark-heading {
+  margin-left: 250px;
+  padding-top: 10px;
+}
+
+#search-stack {
+  right: -6px;
+  top: -42px;
+}
+
+h1.site-heading {
+  margin-left: 250px;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: 36px;
+}
+
+.slider-wrapper.theme-default {
+  margin-top: -36px;
+  width: 100%;
+}
+#opener {
+  z-index: 1000;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// full width hack
+.container {
+  max-width: 100%;
+}
+
+.container-main {
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.col-md-12 h1 {
+  display: none;
+}
+
+div.col-md-12 ul.breadcrumb {
+  display: none;
+}
