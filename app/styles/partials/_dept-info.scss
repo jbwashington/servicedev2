@@ -1,0 +1,26 @@
+@import "base";
+
+.dept-info {
+
+  @include make-container();
+
+  .dept-header {
+    @include make-row();
+
+    text-transform: uppercase;
+    font-size: $font-size-h3;
+    color: $brand-vac;
+  }
+
+  section {
+    line-height: $line-height;
+
+  }
+
+  .dept-content {
+
+  }
+
+  @include clearfix();
+
+}
