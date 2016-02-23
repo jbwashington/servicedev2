@@ -1,29 +1,16 @@
 // .............................
 // TYPOGRAPHY
 // .............................
-// typographic styles and mixins
-// .............................
 
 @import "base";
 
-
-// FONTS
 // .............................
-$lato                    : 'Lato', Helvetica, Arial, sans-serif;
-$fatface                 : 'Abril Fatface', cursive;
-
-
 // GOOGLE FONTS
-// ............
+// .............................
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700|Abril+Fatface);
 
-html {
-  font-size: $font-size-root;
-  font-smoothing: antialiased;
-}
+// .............................
+// FONTS
+// .............................
 
-body {
-  font-family: $lato;
-  font-size: $font-size-base;
-}
-
+$lato                    : 'Lato', Helvetica, Arial, sans-serif;

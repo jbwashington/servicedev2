@@ -9,6 +9,7 @@ $icon-font-path: '../fonts/';
 // .....................
 @import "partials/base";
 @import "partials/global";
+@import "partials/custom";
 
 // PARTIALS
 // ........
@@ -19,7 +20,6 @@ $icon-font-path: '../fonts/';
 @import "partials/nav";
 @import "partials/logo";
 @import "partials/hero";
+@import "partials/dept-card";
 @import "partials/footer";
 
-@import "partials/featured-section";
-@import "partials/dept-card";

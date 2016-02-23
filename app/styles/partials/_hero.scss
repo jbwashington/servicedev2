@@ -3,32 +3,33 @@
 
 $bg-image: "https://placekitten.com/g/1400/500";
 $bg-overlay: darken(rgba(132,47,167,0.9),30%);
-$hero-height: 30rem;
+$hero-height: 60rem;
 
 .hero {
   @include bg-images($bg-image,$bg-overlay);
   height: $hero-height;
+
   header {
     width: 40rem;
     position: absolute;
     bottom: 0;
     right: 0;
     text-align: left;
-    padding-top: 20rem;
-    padding-bottom: 3rem;
+    padding-top: 40rem;
     padding-right: 3rem;
-    margin-right: 3rem;
-    margin-bottom: 3rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
     text-transform: uppercase;
+    font-size: $display4-size;
+    font-weight: $display1-weight;
+    line-height: $line-height;
+    color: $white;
+
     span {
-      font-weight: 700;
-    }
-    h1 {
-      color: white;
-      font-size: font-size-lg;
-      line-height: $line-height-lg;
+      font-weight: $display4-weight;
     }
   }
+  @include clearfix();
 }
 
 .block {
