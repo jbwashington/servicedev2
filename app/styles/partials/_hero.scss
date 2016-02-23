@@ -1,0 +1,53 @@
+// hero section
+@import "base";
+
+$bg-image: "https://placekitten.com/g/1400/500";
+$bg-overlay: darken(rgba(132,47,167,0.9),30%);
+$hero-height: 30rem;
+
+.hero {
+  @include bg-images($bg-image,$bg-overlay);
+  height: $hero-height;
+  header {
+    width: 40rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    padding-top: 20rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    span {
+      font-weight: 700;
+    }
+    h1 {
+      color: white;
+      font-size: font-size-lg;
+      line-height: $line-height-lg;
+    }
+  }
+}
+
+.block {
+  position: absolute;
+  width: 40rem;
+  top: 0;
+  right: 0;
+  height: auto;
+  // margin-left: 5rem;
+}
+
+.triangle {
+  z-index: 1;
+  position: relative;
+  width        : 0;
+  height       : 0;
+  margin       : auto;
+  border-top   : 2rem solid #f7f7f7;
+  border-left  : 2rem solid transparent;
+  border-right : 2rem solid transparent;
+}
+

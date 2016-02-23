@@ -1,0 +1,26 @@
+@import 'base';
+
+// .............
+// footer styles
+// .............
+$footer-height: 6rem;
+
+footer {
+  @include make-container();
+  position   : absolute;
+  bottom     : 0;
+  left       : 0;
+  width      : 100%;
+  background : $brand-red !important;
+  color      : white;
+  // set fixed height of footer here
+  height     : $footer-height;
+  line-height: $footer-height;
+  text-align : center;
+
+  p {
+    font-size: 85%;
+    text-transform: uppercase;
+  }
+}
+

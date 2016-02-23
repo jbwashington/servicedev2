@@ -1,0 +1,25 @@
+// global styles
+// (they apply everywhere)
+// .......................
+html {
+  position: relative;
+  font-smoothing: subpixel-antialiased !important;
+  min-height: 100%;
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  // margin bottom by footer height
+  margin-bottom: 6rem;
+}
+.container {
+  max-width: 100% !important;
+}
+
+.container-main {
+  @include make-container();
+}
+

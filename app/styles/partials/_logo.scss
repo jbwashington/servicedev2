@@ -1,0 +1,19 @@
+// logo section
+
+header.program {
+  @include make-container();
+  height: auto;
+}
+
+.logo {
+  @include make-row();
+}
+
+.vac {
+  @include make-col-span(4);
+  background-image: none, url('./images/vac-logo.svg');
+
+  img {
+    padding-left: 3rem;
+  }
+}

@@ -1,43 +1,29 @@
-@import "base";
-
+// .............................
+// TYPOGRAPHY
+// .............................
 // typographic styles and mixins
 // .............................
 
-h1, h2, h3,
-h4, h5, h6 {
-  text-rendering : optimizeLegibility;
-  line-height    : 1;
-  margin-top     : 0;
-  font-family    : $lato;
+@import "base";
+
+
+// FONTS
+// .............................
+$lato                    : 'Lato', Helvetica, Arial, sans-serif;
+$fatface                 : 'Abril Fatface', cursive;
+
+
+// GOOGLE FONTS
+// ............
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700|Abril+Fatface);
+
+html {
+  font-size: $font-size-root;
+  font-smoothing: antialiased;
 }
 
-h1 {
-  font-size      : $h1-font-size;
-  font-weight    : 700;
-  line-height    : 1.2em;
-  letter-spacing : -2px;
-  text-indent    : -3px;
+body {
+  font-family: $lato;
+  font-size: $font-size-base;
 }
 
-h2 {
-  font-size      : $h2-font-size;
-  line-height    : 1.2em;
-  letter-spacing : -1px;
-  text-indent    : -2px;
-}
-
-h3 {
-  font-size      : $h3-font-size;
-}
-
-h4 {
-  font-size      : $h4-font-size;
-}
-
-h5 {
-  font-size      : $h5-font-size;
-}
-
-h6 {
-  font-size      : $h6-font-size;
-}
