@@ -1,0 +1,41 @@
+// ...........................
+// SVG MIXIN WITH PNG FALLBACK
+// ...........................
+
+@mixin svg($path, $width, $height, $position: 50% 50%, $background-size: 100%) {
+  background-image: url('#{$path}.png');  // needed for fallback
+  background-image: url('#{$path}.svg');
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $background-size; // needed for fallback
+  height: $height;
+  width: $width;
+}
+
+// ................
+// example usage
+// ................
+
+.foo {
+  @include svg('http://stacykvernmo.com/svg/logo', 250px, 250px, 50% 50%, 100%);
+}
+
+// just for fun styles
+.foo {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+  &:hover {
+    -moz-transform: scale(2) rotate(360deg) translate(0px);
+    -webkit-transform: scale(2) rotate(360deg) translate(0px);
+    -o-transform: scale(2) rotate(360deg) translate(0px);
+    transform: scale(2) rotate(360deg) translate(0px);
+}
+
+margin: 15% auto 0;
+
+}
+
+

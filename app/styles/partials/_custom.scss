@@ -1,11 +1,11 @@
-// Variables
-//
-// Copy settings from this file into the provided `_custom.scss` to override
-// the Bootstrap defaults without modifying key, versioned files.
+// ====================
+// VARIABLES
+// ====================
 
 
-// Table of Contents
-//
+// .................
+// TABLE OF CONTENTS
+// .................
 // Colors
 // Options
 // Spacing
@@ -17,8 +17,9 @@
 // Fonts
 // Components
 
-// General variable structure
-//
+// .............................
+// GENERAL VARIABLE STRUCTURE
+// .............................
 // Variable format should follow the `$component-modifier-state-property` order.
 
 
@@ -27,22 +28,22 @@
 // ..........................................
 // Grayscale and brand colors for use across Bootstrap.
 // ..........................................
-$gray-dark        : #0E0E0E !default;
-$gray             : #55595c !default;
-$gray-light       : #292929 !default;
-$gray-lighter     : #393939 !default;
-$gray-lightest    : #B9B9B9 !default;
+$gray-dark        : rgb(14,14,14) !default;
+$gray             : rgb(41,41,41) !default;
+$gray-light       : rgb(85,89,92) !default;
 
-$brand-red    : #9D2235 !default; // razorback red
-$brand-vac        : #842FA7 !default; // VAC
-$brand-dreambig   : #FF5859 !default; // dream big
-$brand-engagement : #1FCFCB !default; // student engagement
-$brand-recovery   : #F5BA0A !default; // RFR
-$brand-pantry     : #00B44E !default; // pantry
-$brand-literacy   : #2A7DE2 !default; // literacy
+$gray-lighter     : rgb(57,57,57) !default;
+$gray-lightest    : rgb(185,185,185) !default;
+$brand-red        : rgb(157,34,53)  !default;  // razorback red
+$brand-vac        : rgb(132,47,167) !default;  // VAC
+$brand-dreambig   : rgb(255,88,89)  !default;  // dream big
+$brand-engagement : rgb(31,207,203) !default;  // student engagement
+$brand-recovery   : rgb(245,186,10) !default;  // RFR
+$brand-pantry     : rgb(0,180,78)   !default;  // pantry
+$brand-literacy   : rgb(42,125,226) !default;  // literacy
 
-$white            : #FFF !default;    // white
-$black            : #000 !default;    // black
+$white            : rgb(255,255,255) !default; // white
+$black            : rgb(0,0,0) !default;       // black
 
 // ..........................................
 // Options
@@ -88,7 +89,6 @@ $spacers: (
 ) !default;
 
 $border-width:               1px !default;
-
 
 // ..........................................
 // BODY

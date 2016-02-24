@@ -2,7 +2,6 @@
 // CSS TEXT SELECT HIGHLIGHT
 // .........................
 
-// This is the mixin
 @mixin highlight($backgroundColor, $textColor) {
   ::selection, -moz::selection {
     background: $backgroundColor;
@@ -11,4 +10,5 @@
 }
 
 // EXAMPLE:
+// ........
 // $highlight($brand-red, $white);
