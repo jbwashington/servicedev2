@@ -1,16 +1,19 @@
 @import "base";
+// ...............
 
+
+// WRAPPER
+// ............
 .dept-info {
   max-width: 60rem;
   padding-top: 6rem;
   @include make-container();
-
   header {
     text-transform: uppercase;
     font-size: $font-size-h1 !important;
     font-weight: 700;
     color: $brand-vac;
-}
+  }
   section {
     font-size: $font-size-h3;
   }
@@ -23,16 +26,18 @@
     padding-left: 0;
     line-height: $line-height;
   }
+
   b {
     color: $black;
     font-weight: 900;
   }
 }
 
+// ABOUT SECTION
 .about {
-  margin-bottom: 1rem;
   @include make-row();
 }
+
 
 .programs {
   @include make-row();
@@ -46,11 +51,16 @@
   @include make-col-span(6);
 }
 
-.dept-start {
+.get-involved {
   @include make-row();
+}
+
+.dept-start {
   color: $brand-vac;
 }
 
+// FOOTER
+// ------
 .contact {
   @include make-row();
 }
@@ -60,11 +70,10 @@
 }
 
 .social {
-  padding-top: 4rem;
   @include make-col-span(4);
   a {
     padding-left: 1rem;
-  }
+}
   i {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -74,13 +83,4 @@
 
 .logo {
   @include make-col-span(4);
-}
-.logo-small{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 10rem;
-  margin-right: 33rem;
-  margin-bottom: 3rem;
-
 }

@@ -4,51 +4,51 @@
 
 /* Mixins */
 @mixin bg-images(
-    $image-path: "https://placekitten.com/g/1400/500",
-    $overlay-color: rgba(157,34,53,0.7),
-    $position: center center) {
+$image-path: "https://placekitten.com/g/1400/500",
+$overlay-color: rgba(157,34,53,0.7),
+$position: center center) {
 
-    animation: bgFadeIn 1s ease-in both;
-    position: relative;
+  animation: bgFadeIn 1s ease-in both;
+  position: relative;
 
-    &:before {
-        background:
-            linear-gradient(
-              $overlay-color,
-              $overlay-color
-            ),
-            url($image-path);
-        background-color: #CCCCCC;
-        background-attachment: fixed;
-        background-position: $position;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        bottom: 0;
-        content: ' ';
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -1;
-    }
+  &:before {
+    background:
+    linear-gradient(
+    $overlay-color,
+    $overlay-color
+    ),
+    url($image-path);
+    background-color: #CCCCCC;
+    background-attachment: fixed;
+    background-position: $position;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
 
-    @keyframes bgFadeIn {
-        0% { background-color: rgba(255, 255, 255, 1); }
-        100% { background-color: rgba(255, 255, 255, 0); }
-    }
+  @keyframes bgFadeIn {
+    0% { background-color: rgba(255, 255, 255, 1); }
+    100% { background-color: rgba(255, 255, 255, 0); }
+  }
 }
 
 @mixin full-image($image-url) {
   @extend %full-width-content-holder;
-    background: url($image-url) no-repeat center center fixed;
-    background-size: cover;
+  background: url($image-url) no-repeat center center fixed;
+  background-size: cover;
   &:after {
     background: inherit;
-  }
-  &:before {
-    background: inherit;
-  }
+}
+&:before {
+  background: inherit;
+}
 }
