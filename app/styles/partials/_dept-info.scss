@@ -1,86 +1,76 @@
 @import "base";
-// ...............
 
-
+//////////
 // WRAPPER
-// ............
-.dept-info {
+//////////
+
+.dept-wrapper {
+  @include make-container();
   max-width: 60rem;
   padding-top: 6rem;
-  @include make-container();
+
   header {
     text-transform: uppercase;
     font-size: $font-size-h1 !important;
     font-weight: 700;
     color: $brand-vac;
-}
-section {
-  font-size: $font-size-h3;
-}
-a {
-  color: $brand-vac !important;
-  text-decoration: none;
-}
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  line-height: $line-height;
+  }
+  section {
+    font-size: $font-size-h3;
+  }
+  a {
+    color: $brand-vac !important;
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: $line-height;
+  }
+  b {
+    color: $black;
+    font-weight: 900;
+  }
+  i {
+    color: $brand-vac;
+    padding-right: 2rem;
+  }
+  address {
+    line-height: 1.7;
+  }
+  figure {
+    width: 100%;
+    height: auto;
+  }
 }
 
-b {
-  color: $black;
-  font-weight: 900;
-}
-}
-
-// ABOUT SECTION
+///////////////////
+// ABOUT SECTION //
+///////////////////
 .about {
   @include make-row();
 }
-
-
 .programs {
   @include make-row();
 }
-
 .signature {
   @include make-col-span(6);
 }
-
 .events {
   @include make-col-span(6);
 }
-
 .get-involved {
   @include make-row();
 }
-
-.dept-start {
-  color: $brand-vac;
-}
-
-// FOOTER
-// ------
 .contact {
   @include make-row();
 }
-
-.dept-contact {
-  @include make-col-span(4);
+.location {
+  @include make-col-span(5);
 }
-
 .social {
-  @include make-col-span(4);
-  a {
-    padding-left: 1rem;
+  @include make-col-span(5);
 }
-i {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: $black;
-}
-}
-
 .logo {
-  @include make-col-span(4);
+  @include make-col-span(2);
 }
