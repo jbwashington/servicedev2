@@ -13,24 +13,24 @@
     font-size: $font-size-h1 !important;
     font-weight: 700;
     color: $brand-vac;
-  }
-  section {
-    font-size: $font-size-h3;
-  }
-  a {
-    color: $brand-vac !important;
-    text-decoration: none;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-    line-height: $line-height;
-  }
+}
+section {
+  font-size: $font-size-h3;
+}
+a {
+  color: $brand-vac !important;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: $line-height;
+}
 
-  b {
-    color: $black;
-    font-weight: 900;
-  }
+b {
+  color: $black;
+  font-weight: 900;
+}
 }
 
 // ABOUT SECTION
@@ -74,11 +74,11 @@
   a {
     padding-left: 1rem;
 }
-  i {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: $black;
-  }
+i {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: $black;
+}
 }
 
 .logo {

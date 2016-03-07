@@ -16,26 +16,26 @@
 // example usage
 // ................
 
-.foo {
-  @include svg('http://stacykvernmo.com/svg/logo', 250px, 250px, 50% 50%, 100%);
-}
+// .foo {
+//   @include svg('http://stacykvernmo.com/svg/logo', 250px, 250px, 50% 50%, 100%);
+// }
 
 // just for fun styles
-.foo {
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+// .foo {
+//   -moz-transition: all 1s ease;
+//   -webkit-transition: all 1s ease;
+//   -o-transition: all 1s ease;
+//   transition: all 1s ease;
 
-  &:hover {
-    -moz-transform: scale(2) rotate(360deg) translate(0px);
-    -webkit-transform: scale(2) rotate(360deg) translate(0px);
-    -o-transform: scale(2) rotate(360deg) translate(0px);
-    transform: scale(2) rotate(360deg) translate(0px);
-}
+//   &:hover {
+//     -moz-transform: scale(2) rotate(360deg) translate(0px);
+//     -webkit-transform: scale(2) rotate(360deg) translate(0px);
+//     -o-transform: scale(2) rotate(360deg) translate(0px);
+//     transform: scale(2) rotate(360deg) translate(0px);
+// }
 
-margin: 15% auto 0;
+// margin: 15% auto 0;
 
-}
+// }
 
 
