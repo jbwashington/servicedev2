@@ -1,24 +1,18 @@
-$icon-font-path: '../fonts/';
-
+// VENDOR INCLUDES
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap-flex.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-// MODULES AND VARIABLES
-// .....................
-@import "partials/base";
-@import "partials/global";
-@import "partials/custom";
+// HELPERS
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
 
-// PARTIALS
-// ........
-@import "partials/reset";
-@import "partials/typography";
-@import "partials/grids";
-@import "partials/uark-styles";
-@import "partials/nav";
-@import "partials/logo";
-@import "partials/hero";
-@import "partials/footer";
-@import "partials/dept-info";
+// BASE
+@import "base/reset";
+@import "base/typography";
+
+// COMPONENTS
+@import "components/colors";
+@import "components/cover";

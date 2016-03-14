@@ -1,0 +1,25 @@
+@import "helpers/variables";
+
+// .............................
+// TYPOGRAPHY
+// .............................
+
+$display1-weight         : 300 !default;
+$display2-weight         : 400 !default;
+$display3-weight         : 700 !default;
+$display4-weight         : 900 !default;
+
+$light: $display1-weight;
+$normal: $display2-weight;
+$semibold: $display3-weight;
+$bold: $display4-weight;
+
+html {
+  font-smoothing: subpixel-antialiased !important;
+}
+body {
+  font-family: $font-family-sans-serif;
+  font-weight: $light;
+  color: $gray-dark;
+  font-size: $font-size-root;
+}

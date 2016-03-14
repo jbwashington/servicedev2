@@ -1,5 +1,5 @@
-// logo section
-
+//HEADER
+////////
 header.program {
   @include make-container();
   height: auto;
@@ -11,9 +11,9 @@ header.program {
 
 .vac {
   @include make-col-span(4);
-  background-image: none, url('./images/vac-logo.svg');
+  background-image: none, url('../images/vac-logo.svg');
 
   img {
     padding-left: 3rem;
-  }
+}
 }

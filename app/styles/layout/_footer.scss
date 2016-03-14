@@ -1,0 +1,29 @@
+@import 'main';
+
+////////////////
+// FOOTER STYLES
+////////////////
+
+
+footer {
+  @include make-container();
+  position                           : absolute;
+  float                              : both;
+  bottom                             : 0;
+  left                               : 0;
+  padding-top                        : 3rem;
+  margin                             : 3rem 3rem 3rem 3rem;
+  width                              : 100%;
+  background                         : transparent !important;
+  color                              : white;
+  // set fixed height of footer here
+  height                             : $footer-height;
+  line-height                        : $footer-height;
+  text-align                         : center;
+
+  p {
+    text-transform: uppercase;
+}
+}
+
+

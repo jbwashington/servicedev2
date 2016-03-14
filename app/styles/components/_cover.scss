@@ -1,16 +1,15 @@
-// .................................
-// full width background image mixin
-// .................................
+//FULL WIDTH BACKGROUND IMAGE MIXIN
+///////////////////////////////////
 
-/* Mixins */
-@mixin bg-images(
-$image-path: "https://placekitten.com/g/1400/500",
-$overlay-color: rgba(157,34,53,0.7),
-$position: center center) {
+//EXAMPLE:
+//////////
+// $bg-image: "https://placekitten.com/g/1400/500";
+// $bg-overlay: darken(rgba(132,47,167,0.9),30%);
+// .hero { @include bg-images($bg-image,$bg-overlay); }
 
+@mixin bg-images( $image-path: "https://placekitten.com/g/1400/500", $overlay-color: rgba(157,34,53,0.7), $position: center center) {
   animation: bgFadeIn 1s ease-in both;
   position: relative;
-
   &:before {
     background:
     linear-gradient(
@@ -33,12 +32,11 @@ $position: center center) {
     right: 0;
     top: 0;
     z-index: -1;
-  }
-
-  @keyframes bgFadeIn {
-    0% { background-color: rgba(255, 255, 255, 1); }
-    100% { background-color: rgba(255, 255, 255, 0); }
-  }
+}
+@keyframes bgFadeIn {
+  0% { background-color: rgba(255, 255, 255, 1); }
+  100% { background-color: rgba(255, 255, 255, 0); }
+}
 }
 
 @mixin full-image($image-url) {

@@ -1,0 +1,100 @@
+///////////////////////////////////////////////////////
+// SVG MIXIN WITH PNG FALLBACK
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// EXAMPLE USAGE
+///////////////////////////////////////////////////////
+// .foo {
+//   @include svg('http://stacykvernmo.com/svg/logo', 250px, 250px, 50% 50%, 100%);
+// }
+// just for fun styles
+// .foo {
+//   -moz-transition: all 1s ease;
+//   -webkit-transition: all 1s ease;
+//   -o-transition: all 1s ease;
+//   transition: all 1s ease;
+//   &:hover {
+//     -moz-transform: scale(2) rotate(360deg) translate(0px);
+//     -webkit-transform: scale(2) rotate(360deg) translate(0px);
+//     -o-transform: scale(2) rotate(360deg) translate(0px);
+//     transform: scale(2) rotate(360deg) translate(0px);
+// }
+// margin: 15% auto 0;
+// }
+@mixin svg($path, $width, $height, $position: 50% 50%, $background-size: 100%) {
+  background-image: url('#{$path}.png');  // needed for fallback
+  background-image: url('#{$path}.svg');
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $background-size; // needed for fallback
+  height: $height;
+  width: $width;
+}
+
+
+///////////////////////////////////////////////////////
+// CSS TEXT SELECT HIGHLIGHT
+///////////////////////////////////////////////////////
+// EXAMPLE:
+///////////////////////////////////////////////////////
+// $highlight($brand-red, $white);
+///////////////////////////////////////////////////////
+@mixin highlight($backgroundColor, $textColor) {
+    ::selection, -moz::selection {
+      background: $backgroundColor;
+      color: $textColor;
+  }
+}
+
+///////////////////////////////////////////////////////
+//FULL WIDTH BACKGROUND IMAGE MIXIN
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+//EXAMPLE:
+///////////////////////////////////////////////////////
+// $bg-image: "https://placekitten.com/g/1400/500";
+// $bg-overlay: darken(rgba(132,47,167,0.9),30%);
+// .hero { @include bg-images($bg-image,$bg-overlay); }
+///////////////////////////////////////////////////////
+@mixin bg-image( $image-path: "https://placekitten.com/g/1400/500", $overlay-color: rgba(157,34,53,0.7), $position: center center) {
+  animation: bgFadeIn 1s ease-in both;
+  position: relative;
+  &:before {
+    background:
+    linear-gradient(
+    $overlay-color,
+    $overlay-color
+    ),
+    url($image-path);
+    background-color: #CCCCCC;
+    background-attachment: fixed;
+    background-position: $position;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+@keyframes bgFadeIn {
+  0% { background-color: rgba(255, 255, 255, 1); }
+  100% { background-color: rgba(255, 255, 255, 0); }
+}
+}
+@mixin full-image($image-url) {
+  @extend %full-width-content-holder;
+  background: url($image-url) no-repeat center center fixed;
+  background-size: cover;
+  &:after {
+    background: inherit;
+}
+&:before {
+  background: inherit;
+}
+}

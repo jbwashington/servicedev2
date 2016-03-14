@@ -1,3 +1,20 @@
+// RESET
+// reset and normalize
+body {
+  overflow-x: hidden;
+  margin-bottom: 6rem; // margin bottom by footer height
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.container {
+  max-width: 100% !important; // full width uark container hack
+}
+// .container-main {
+//   @include make-container();
+// }
+
 // tweaks to make the uark header and footer styles play nice
 // ..........................................................
 
