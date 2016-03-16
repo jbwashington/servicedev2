@@ -14,12 +14,16 @@ $normal: $display2-weight;
 $semibold: $display3-weight;
 $bold: $display4-weight;
 
+$text-color: $gray-dark;
+
 html {
   font-smoothing: subpixel-antialiased !important;
+  font-size: $font-size-root;
 }
 body {
+  color: $text-color;
+  font-size: $font-size-base;
   font-family: $font-family-sans-serif;
   font-weight: $light;
-  color: $gray-dark;
-  font-size: $font-size-root;
+  line-height: $line-height;
 }

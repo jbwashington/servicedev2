@@ -1,4 +1,26 @@
 ///////////////////////////////////////////////////////
+// BOOTSTRAP BUTTON VARIANT MIXIN
+///////////////////////////////////////////////////////
+// mixin to create a bootstrap button in any color.
+// It adjusts the border and text colors to work well with the given color,
+// then uses Bootstrap's button-variant mixin to do the styling.
+///////////////////////////////////////////////////////
+// EXAMPLE:
+// .btn-vac {
+//     @include bootstrap-button(#3566e7);
+//   }
+///////////////////////////////////////////////////////
+
+@mixin bootstrap-button($background) {
+  $color: #fff;
+  $border: 5%;
+  @if (lightness($background) >= lightness(#aaa)) {
+    $color: #333;
+    $border: .2 * lightness($background);
+  }
+  @include button-variant($color, $background, darken($background, $border));
+}
+///////////////////////////////////////////////////////
 // SVG MIXIN WITH PNG FALLBACK
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////

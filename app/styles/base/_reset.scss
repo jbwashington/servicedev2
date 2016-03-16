@@ -1,40 +1,36 @@
 // RESET
 // reset and normalize
-body {
-  overflow-x: hidden;
-  margin-bottom: 6rem; // margin bottom by footer height
-}
 html {
-  position: relative;
+  // position: relative;
   min-height: 100%;
 }
-.container {
-  max-width: 100% !important; // full width uark container hack
-}
+// body {
+//   overflow-x: hidden;
+// }
+// .container {
+//   max-width: 100% !important; // full width uark container hack
+// }
 // .container-main {
-//   @include make-container();
+//   @include make-container(); // renamed original container into container-main as uark workaround
 // }
 
+/////////////////////////////////////////////////////////////
 // tweaks to make the uark header and footer styles play nice
-// ..........................................................
-
+/////////////////////////////////////////////////////////////
 h1.uark-heading {
   margin-left: 250px;
   padding-top: 10px;
 }
-
 #search-stack {
   right: -6px;
   top: -42px;
 }
-
 h1.site-heading {
   margin-left: 250px;
   font-weight: 300;
   font-size: 3rem;
   margin-top: 36px;
 }
-
 .slider-wrapper.theme-default {
   margin-top: -36px;
   width: 100%;
@@ -45,12 +41,9 @@ h1.site-heading {
   padding-left: 30px;
   padding-right: 30px;
 }
-
-
 div.col-md-12 h1 {
   display: none;
 }
-
 div.col-md-12 ul.breadcrumb {
   display: none;
 }
