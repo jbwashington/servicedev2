@@ -1,18 +1,21 @@
 // NAVIGATION
 @import 'helpers/variables';
+.off-canvas-dropdown {
+  background: yellow;
+}
 
 .navbar {
   margin-bottom: 0;
 }
 .navbar-collapse .container-fluid {
   padding: 2rem 2.5rem;
-  border-bottom: 1px solid #55595c;
+  border-bottom: .2rem solid darken($brand-red, 3%);
 }
 .navbar-collapse h4 {
-  color: #818a91;
+  color: $white;
 }
 .navbar-collapse .text-muted {
-  color: #818a91;
+  color: $white;
 }
 .about {
   float: left;
@@ -21,10 +24,10 @@
 }
 .social a {
   font-weight: 500;
-  color: #eceeef;
+  color: $white;
 }
 .social a:hover {
-  color: #fff;
+  color: $white;
 }
 
 .navbar.navbar-static-top.navbar-dark.bg-inverse {
@@ -32,6 +35,10 @@
   color: darkgrey;
 }
 div#navbar-header {
-  background: #373a3c;
-  color: white;
-      }
+  background: $brand-red;
+  color: $white;
+}
+.about a {
+  color: $white;
+  text-decoration: underline;
+}

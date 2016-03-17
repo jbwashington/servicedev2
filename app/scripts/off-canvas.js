@@ -1,4 +1,4 @@
-// OFF CANVAS NAVIGATION 
+// OFF CANVAS NAVIGATION
 $(document).ready(function() {
   $('[data-toggle=offcanvas]').click(function() {
     $('.row-offcanvas').toggleClass('active');
