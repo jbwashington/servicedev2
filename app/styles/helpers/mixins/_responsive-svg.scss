@@ -1,0 +1,20 @@
+////////////////////////////////////////////////////////
+// RESPONSIVE SVG MIXIN
+////////////////////////////////////////////////////////
+// apply the mixin to the div that surrounds your svg
+// get the svg width and height from the viewbox attribute of the SVG
+// arguments are ($svgwidth, $svgheight, $containerwidth)
+// see: http://mimoymima.com/sass-mixin-responsive-svgs/
+////////////////////////////////////////////////////////
+@mixin responsive-svg($svgwidth, $svgheight, $containerwidth){
+  width: $containerwidth; // sizes the svg
+  margin: 0 auto; // centers the svg
+  height: 0;
+  padding-top: #{($svgheight/$svgwidth)*$containerwidth};
+  position: relative;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
