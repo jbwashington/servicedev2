@@ -4,6 +4,16 @@
 // TYPOGRAPHY
 // .............................
 
+// GOOGLE FONTS
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900,400italic);
+
+$lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+$font-family-sans-serif:     $lato;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:           $font-family-sans-serif !default;
+
 $display1-weight         : 300 !default;
 $display2-weight         : 400 !default;
 $display3-weight         : 700 !default;
@@ -23,7 +33,7 @@ html {
 body {
   color: $body-color;
   font-size: $font-size-base;
-  font-family: $font-family-sans-serif;
+  font-family: $lato;
   font-weight: $light;
   line-height: $line-height;
   background: $body-bg;
@@ -36,4 +46,5 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
+  font-family: $font-family-sans-serif;
 }

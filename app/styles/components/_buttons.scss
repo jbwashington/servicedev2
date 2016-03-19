@@ -1,3 +1,21 @@
 // ..........
 // BUTTONS
 // ..........
+.btn-custom {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-sm;
+  border-radius: 0px;
+  border-width: .2rem;
+  background:transparent;
+  border-color:$red;
+  color:$red;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-custom-vac {
+  @extend .btn-custom;
+  @extend .vac;
+}
+

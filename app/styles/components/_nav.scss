@@ -1,7 +1,7 @@
 // NAVIGATION
 @import 'helpers/variables';
 .off-canvas-dropdown {
-  background: yellow;
+  background: transparent;
 }
 
 .navbar {
@@ -32,7 +32,7 @@
 
 .navbar.navbar-static-top.navbar-dark.bg-inverse {
   background: transparent;
-  color: darkgrey;
+  color: $gray-dark;
 }
 div#navbar-header {
   background: $brand-red;
