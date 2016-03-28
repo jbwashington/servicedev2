@@ -1,21 +1,45 @@
 // ..........
 // BUTTONS
 // ..........
+
+@mixin cce-button($dept:$red) {
+  @include bootstrap-button($dept);
+  background:$white;
+  color:$dept;
+  font-weight:400;
+  font-size:1.3rem;
+  margin:1rem;
+  padding:0.7rem;
+  border:2px solid $dept;
+  text-align:center;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:0.3s;
+  &:hover {
+    text-decoration:none;
+    font-weight:300;
+  }
+}
+
+// DEPARTMENT BUTTONS
 .btn-custom {
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .btn-sm;
-  border-radius: 0px;
-  border-width: .2rem;
-  background:transparent;
-  border-color:$red;
-  color:$red;
-  text-transform: uppercase;
-  font-weight: bold;
+  @include cce-button;
 }
-
 .btn-custom-vac {
-  @extend .btn-custom;
-  @extend .vac;
+  @include cce-button($vac);
 }
-
+.btn-custom-dream-big {
+  @include cce-button($dream-big);
+}
+.btn-custom-engagement {
+  @include cce-button($student-engagement);
+}
+.btn-custom-recovery {
+  @include cce-button($recovery);
+}
+.btn-custom-pantry {
+  @include cce-button($pantry);
+}
+.btn-custom-literacy {
+  @include cce-button($literacy);
+}
